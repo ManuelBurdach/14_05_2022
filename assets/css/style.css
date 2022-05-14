@@ -156,6 +156,7 @@ section article div:first-child{
 
 footer{
     margin-top: 3rem;
+    padding: 0 1rem;
 }
 
 footer > p{
