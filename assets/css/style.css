@@ -1,0 +1,195 @@
+/* =========== FONTS & COLORS ========== */
+
+/* font-family: 'Karla', sans-serif; / color:#323A45, #848484; */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* =========== GENERAL ========== */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+
+body{
+    padding: 1rem;
+    margin-top: 5rem;
+    color: #323A45;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+h2{
+    font-weight: 400;
+}
+
+a{
+    font-weight: 500;
+}
+
+/* =========== CLASSES GRID ========== */
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px,800px));
+    gap:2rem;
+    margin: 1rem;
+}
+
+.bigitem{
+    grid-column: 1/-1;
+    grid-row: 1/3;
+}
+
+.smallitem{
+    grid-column: 1/2;
+}
+
+.smallitem1{
+    grid-column: 2/3;
+}
+
+.smallitem2{
+    grid-column: 3/4;
+}
+
+/* =========== CLASSES SPAN ========== */
+
+.black{
+    color: #000;
+    font-weight: 500;
+}
+
+.italic{
+    font-style: italic;
+}
+
+/* =========== HEADER & NAV ========== */
+
+header{
+    position:fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #fff;
+    padding: 2rem;
+    z-index: 100;
+}
+
+header a{
+    text-decoration: none;
+    color: #323A45;
+}
+
+header nav a{
+    margin-left: 3rem;
+}
+
+header a:hover{
+    color: #848484;
+}
+
+@media only screen and (max-width: 800px){
+    header{
+        display: block;
+    }
+    header nav{
+        margin-top: 1rem;
+    }
+    body{
+        margin-top: 7rem;
+    }
+}
+
+/* ========== GRID SECTIONS ==========  */
+
+.bigitem img{
+    width: 100%;
+}
+
+.smallitem img, .smallitem1 img, .smallitem2 img{
+    width: 100%;
+}
+
+.bigitem div:nth-of-type(1){
+    background-color: #f7f7f7;
+}
+
+section article div:first-child{
+    background-color: #EEEEEE;
+}
+
+.grid article div:nth-of-type(2){
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+
+@media only screen and (max-width:800px){
+    .grid article div:nth-of-type(2){
+        display: block;
+    }
+}
+
+.grid article img{
+    transition: all 0.4s;
+}
+
+.grid article img:hover{
+    opacity: 0.3;
+}
+
+.grid article div span{
+    color: #848484;
+}
+
+/* =========== FOOTER ========== */
+
+footer{
+    margin-top: 3rem;
+}
+
+footer > p{
+    color: #848484;
+    display: inline-block;
+    margin: 2rem 0 1rem 0;
+}
+
+footer > ul{
+    display: inline-block;
+    margin-left: 2rem;
+    color: #848484;
+}
+
+footer section{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer section h3{
+    margin-bottom: 2rem;
+}
+
+footer section p{
+    line-height: 1.5rem;
+}
+
+footer section a{
+    text-decoration: none;
+    color: #323A45;
+    display: block;
+    line-height: 1.5rem;
+}
+
+footer section a:hover{
+    color:#848484;
+}
